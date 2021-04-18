@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie 1 - zmiana koloru po najechaniu</title>
+
+    <style>
+        *{margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        .circle{
+            border-radius: 50%;
+            border: solid #fff 2px;
+            width: 40px;
+            height: 40px;
+            position: fixed;
+            cursor: pointer;
+        }
+        .circle.red {
+    top: 10px;
+    left: 10px;
+    background-color: red;
+}
+.circle.green {
+    top: 10px;
+    right: 10px;
+    background-color: green;
+}
+.circle.blue {
+    bottom: 10px;
+    left: 10px;
+    background-color: blue;
+}
+.circle.orange {
+    bottom: 10px;
+    right: 10px;
+    background-color: orange;
+
+}
+.bg p{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: sans-serif;
+}
+.bg p.orange{
+    opacity: 0;
+    transition: 0.2s;
+}
+.bg p.red{
+    opacity: 0;
+    transition: 0.2s;
+}
+.bg p.blue{
+    opacity: 0;
+    transition: 0.2s;
+}
+.bg p.green{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+
+.bg {
+    width:100vw;
+    height: 100vh;
+    background-color: gray;
+    transition: all 0.5s linear 0.5s;
+}
+.circle.orange:hover ~ .bg {
+background-color: orange;
+}
+.circle.blue:hover ~ .bg {
+background-color: blue;
+}
+.circle.red:hover ~ .bg {
+background-color: red;
+}
+.circle.green:hover ~ .bg {
+background-color: green;
+}
+.circle.orange:hover ~ .bg p.orange {
+opacity:1;
+}
+
+.circle.red:hover ~ .bg p.red {
+opacity:1;
+}
+
+.circle.blue:hover ~ .bg p.blue {
+opacity:1;
+}
+
+.circle.green:hover~.bg p.green {
+opacity:1;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="red circle"></div>
+    <div class="green circle"></div>
+    <div class="blue circle"></div>
+    <div class="orange circle"></div>
+    <div class="bg">
+        <p class="red">Czerwony</p>
+        <p class="green">Zielony</p>
+        <p class="blue">Niebieski</p>
+        <p class="orange">Pomarańczowy</p>
+    </div>
+</body>
+
+</html>
