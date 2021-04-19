@@ -18,7 +18,8 @@
         background-color:#000;
         width: 20px;
         height: 20px;
-        transition: 0.2s;
+      transition: left 2s ease 0s, top ease 2s 2s;
+
         }
         button:hover ~ .square{
             background-color: red;
@@ -28,8 +29,8 @@
         height: 100px;
         }
         button{
-            position: fixed;
-            top: 20px;
+            position: absolute;
+            top: 50px;
             left: 50%;
             transform: translateX(-50%);
         }
