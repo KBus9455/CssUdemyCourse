@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domek</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            position: absolute;
+            top: 90%;
+            left:10%;
+            width: 0;
+            height: 0;
+            transition: 0.75s;
+        }
+   div:nth-child(5),div:nth-child(6),div:nth-child(3) {
+            transition: 1.5s;
+        }
+            div:nth-child(7) {
+            transition: 1s;
+        }
+span{
+    position: fixed;
+    top: 10%;
+     left: 10%;
+   display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(141, 31, 31);
+}
+
+span:hover~div:nth-child(2) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(107, 30, 30);
+            width: 600px;
+            height: 450px;
+        }
+  span:hover~div:nth-child(3){
+              background-color: rgb(15, 13, 13);
+            width: calc(600px / 1.41421356237);
+            height: calc(600px / 1.41421356237);
+               top: 50%;
+            left: 50%;
+            transform: translate(0, calc(-300px - 225px)) rotate(45deg);
+        transform-origin: top left;
+            z-index: -2;
+        }
+
+         span:hover~div:nth-child(4){
+              background-color: rgb(61, 13, 13);
+            width: 150px;
+            height: 220px;
+               top: 50%;
+            left: 50%;
+                     transform: translate(-50%, 5px);
+          }
+                     
+          span:hover~div:nth-child(5){
+              background-color: rgb(251, 215, 50);
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+                  transform: translate(-250px, -125px);
+          }
+                     
+          span:hover~div:nth-child(6){
+             background-color: rgb(251, 215, 50);
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+                  transform: translate(100px, -125px);
+          }
+    span:hover~div:nth-child(7){
+             background-color: rgb(41, 38, 25);
+            width: 70px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+                  transform: translate(150px, -450px);
+                  z-index: -3;
+          }
+
+
+    </style>
+
+</head>
+
+<body>
+    <span>BUDUJEMY</span>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+
+</html>
